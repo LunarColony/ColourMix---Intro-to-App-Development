@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    //Switches
     @IBOutlet weak var systemBlueSwitch: UISwitch!
     @IBOutlet weak var blackSwitch: UISwitch!
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var colourView: UIView!
 
+    //Functions that changes colourView based on switch state
     @IBAction func switchChanged(_ sender: UISwitch) {
         if sender.isOn{
             colourView.backgroundColor = .systemOrange
