@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var systemBlueSwitch: UISwitch!
+    @IBOutlet weak var blackSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colourView.backgroundColor = .systemGray
@@ -18,7 +20,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var colourView: UIView!
 
     @IBAction func switchChanged(_ sender: UISwitch) {
-        colourView.backgroundColor = .systemOrange
+        if sender.isOn{
+            colourView.backgroundColor = .systemOrange
+        } else {
+            colourView.backgroundColor = .systemGray
+        }
     }
+    @IBAction func switchChangedTwo(_ sender: UISwitch) {
+        if sender.isOn{
+            colourView.backgroundColor = .systemBlue
+        } else {
+            colourView.backgroundColor = .systemGray
+        }
+    }
+    @IBAction func switchChangedThree(_ sender: UISwitch) {
+        if sender.isOn{
+            colourView.backgroundColor = .black
+        } else {
+            colourView.backgroundColor = .systemGray
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
 }
 
