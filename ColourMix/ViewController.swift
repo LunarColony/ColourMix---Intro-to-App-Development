@@ -12,10 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        colourView.backgroundColor = .orange
+        colourView.backgroundColor = .systemGray
     }
 
     @IBOutlet weak var colourView: UIView!
 
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        colourView.backgroundColor = .systemOrange
+    }
 }
 
